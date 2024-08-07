@@ -1,36 +1,31 @@
 import React from "react";
-import ReactDOM from "react-dom/client"; 
+import ReactDOM from "react-dom/client";
 
-/**
- * <div id='parent'>
- *      <div id='child1'>
- *          <h1>heading1</h1>
- *          <h2>heading2</h2>
- *      </div>
- *      <div id='child2'>
- *          <h1>heading1</h1>
- *          <h2>heading2</h2>
- *      </div>
- * </div>
- *
- *
- */
+const elem = <span>I'm a react element</span>;
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "heading1"),
-    React.createElement("h2", {}, "heading2"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "heading3"),
-    React.createElement("h2", {}, "heading4"),
-  ]),
-]);
+const element = (
+  <div id="">
+    <h1>{elem} Hello, World!</h1>
+    <p>This is a React Element.</p>
+  </div>
+);
 
-//Jsx
+const Title = () => (
+  <div id="">
+    <h1>Hello, World!</h1>
+    <p>This is a React Component.</p>
+  </div>
+);
 
-console.log(parent); //object
+const HeadingComponent = () => (
+  <div id="container">
+    {element}
+    <Title />
+    <h1 id="" className="heading">
+      React Functional Component
+    </h1>
+  </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(parent);
+root.render(<HeadingComponent />);
