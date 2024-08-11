@@ -1,8 +1,8 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   box-sizing: border-box;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .logo{
-    width: 100px;
+    width: 175px;
     cursor: pointer;
 }
 
@@ -37,10 +37,19 @@
     cursor: pointer;
 }
 
+.login{
+    padding: 5px 35px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 /* remove*/
 .body{
-    /* margin-top: 10px; */
     padding: 20px;
+    margin: 0px calc(10% + 36px);
 }
 
 .search{
@@ -52,11 +61,11 @@
 .restraunt-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 32px;
 }
 
 .restraunt-card{
-    width: 200px;
+    width: 248px;
     padding: 5px;
     border-radius: 10px;
     background-color: lightgray;
@@ -69,16 +78,62 @@
 }
 
 .restraunt-logo{
+    border-radius: 10px;
     width: 100%;
     height: 200px;
 }
 
-.filter-btn{
-    margin: 10px 0px;
+.filter{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search{
+    display: flex;
+    gap: 4px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.search-box{
+    width: 77%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    outline: none;
+}
+
+.btn{
     padding: 10px;
     border: none;
     background-color: blue;
     border-radius: 10px;
     color: white;
     cursor: pointer;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.shimmer-btn{
+    padding: 10px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.shimmer-card{
+    width: 248px;
+    height: 350px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
 }
