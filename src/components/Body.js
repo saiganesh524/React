@@ -52,7 +52,7 @@ const Body = () => {
               const filteredList = listOfrestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-
+              
               setFilteredrestaurants(filteredList);
             }}
           >
@@ -64,9 +64,9 @@ const Body = () => {
             className="btn"
             onClick={() => {
               const filteredList = listOfrestaurants.filter(
-                (res) => res.info.avgRating > 4
+                (res) => res.info.avgRating > 4.5
               );
-              setListOfrestaurants(filteredList);
+              setFilteredrestaurants(filteredList);
             }}
           >
             Top Rated restaurants
