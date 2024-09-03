@@ -5,6 +5,7 @@ const RestrauntCard = (props) => {
 
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
     resData?.info;
+
   return (
     <div className="restraunt-card m-4 p-4 w-[253px] h-[380px] rounded-lg bg-white hover:shadow-2xl">
       <img
@@ -21,6 +22,23 @@ const RestrauntCard = (props) => {
       <h4>{sla?.slaString}</h4>
     </div>
   );
+};
+
+// Higher order component
+
+// input - RestaurantCard ==> RestauarantCardPromoted
+
+export const withPromotedLabel = (RestrauntCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white m-2 p-2 rounded">
+          promoted
+        </label>
+        <RestrauntCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestrauntCard;
