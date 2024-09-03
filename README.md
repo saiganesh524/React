@@ -65,5 +65,15 @@ import {component} from "path"
 -useEffect()
 
 # 2 types of Routing in web apps
- -Client Side Routing
- -Server Side Routing
+
+-Client Side Routing
+-Server Side Routing
+
+# Redux ToolKit
+
+    - Install @reduxjs/toolkit and react-redux
+    - Build our store
+    - Connect our store to our app
+    - Slice (cartSlice)
+    - dispatch(action)
+    - Selector

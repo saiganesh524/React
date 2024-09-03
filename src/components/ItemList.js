@@ -1,7 +1,17 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 import { ITEM_IMG_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
   // console.log(items);
+
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    //Dispatch an action
+    dispatch(addItem(item));
+  };
+
   return (
     <div>
       {items.map((item) => {
@@ -50,7 +60,10 @@ const ItemList = ({ items }) => {
                 />
 
                 <div className="absolute mx-5 my-[-1.7rem]">
-                  <button className="p-2 w-32 text-center bg-white font-bold text-green-500 shadow-lg rounded-xl">
+                  <button
+                    className="p-2 w-32 text-center bg-white font-bold text-green-500 shadow-lg rounded-xl"
+                    onClick={() => handleAddItem(item)}
+                  >
                     ADD
                   </button>
                 </div>
