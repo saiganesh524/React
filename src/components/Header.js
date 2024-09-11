@@ -14,7 +14,7 @@ const Header = () => {
 
   // Selector
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+  // console.log(cartItems);
 
   return (
     <div className="header flex justify-between items-center shadow-lg bg-yellow-100 sm:bg-white">

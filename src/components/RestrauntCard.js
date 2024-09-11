@@ -2,12 +2,16 @@ import { CDN_URL } from "../utils/constants";
 
 const RestrauntCard = (props) => {
   const { resData } = props;
+  // console.log(resData);
 
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
-    resData?.info;
+    resData;
 
   return (
-    <div className="restraunt-card m-4 p-4 w-[253px] h-[380px] rounded-lg bg-white hover:shadow-2xl">
+    <div
+      data-testid="resCard"
+      className="restraunt-card m-4 p-4 w-[253px] h-[380px] rounded-lg bg-white hover:shadow-2xl"
+    >
       <img
         className="restraunt-logo w-full h-[200px] rounded-lg"
         alt="restraunt-logo"

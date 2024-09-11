@@ -27,6 +27,7 @@ const ItemList = ({ items }) => {
         return (
           <div
             key={id}
+            data-testid="foodItems"
             className="border border-b-gray-400 flex justify-between py-4 "
           >
             <div className="w-9/12">

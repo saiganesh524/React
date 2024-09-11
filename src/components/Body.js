@@ -59,6 +59,7 @@ const Body = () => {
         <div className="search m-4 p-4">
           <input
             type="text"
+            data-testid = "searchInput"
             className="search-box border border-solid border-black"
             placeholder="Search for a restaurant"
             value={searchText}
@@ -108,9 +109,9 @@ const Body = () => {
             to={"/restaurants/" + restaurant.info.id}
           >
             {restaurant.info.avgRating > 4.4 ? (
-              <RestaurantCardPromoted resData={restaurant} />
+              <RestaurantCardPromoted resData={restaurant?.info} />
             ) : (
-              <RestrauntCard resData={restaurant} />
+              <RestrauntCard resData={restaurant?.info} />
             )}
           </Link>
         ))}
